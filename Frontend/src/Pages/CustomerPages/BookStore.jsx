@@ -9,7 +9,7 @@ export default function BookStore() {
 
         <div>
             <h1 className="text-center font-bold text-5xl text-blue-950"><span className="text-2xl">Our</span><br />BOOKSTORE</h1>
-            <div className="grid grid-cols-[1fr_3fr] gap-4">
+            <div className="grid sm:grid-cols-[1fr] lg:grid-cols-[1fr_3fr] gap-4">
                 <div className="m-5">
                 <h3 className="text-blue-950 text-3xl">Filter by</h3>
                    <hr />

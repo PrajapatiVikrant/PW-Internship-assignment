@@ -17,7 +17,7 @@ export default function SampleBook(){
            <div className="text-white flex flex-col items-center">
            <span>__________</span>
            <br />
-           <h2 className="lg:text-7xl text-5xl">BOOKS CATEGORY</h2>
+           <h2 className="lg:text-7xl md:text-5xl text-3xl">BOOKS CATEGORY</h2>
            <Category/>
            
            <span>__________</span>
