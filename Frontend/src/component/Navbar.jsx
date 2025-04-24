@@ -19,11 +19,11 @@ export default function Navbar() {
                 </section>
                 <section className="flex w-1/2 justify-around  items-center text-2xl">
                     <span className="cursor-pointer"><Link to='/bookstore'> Bookstore</Link></span>
-                    <span className="cursor-pointer">Order</span>
+                    <span className="cursor-pointer"><Link to='/orderstatus'>Order</Link></span>
                     <span className="cursor-pointer"><Link to='/contact'>Contact</Link></span>
                     <section className="flex items-center">
                     <Link to='/login'> <span className="flex items-center cursor-pointer "><FaCircleUser />  <span className="ml-4">Sign In</span></span></Link>
-                        <div className="flex">
+                        <div className="flex cursor-pointer" onClick={()=>document.getElementById('cart').style.left="68%"}>
                             <span className="text-5xl relative right-2"><BiCartAdd /></span>
                             <span className="absolute text-white rounded-xl  text-base top-4 bg-blue-950  p-1 pt-0 pb-0" >0</span>
                         </div>
@@ -58,13 +58,13 @@ export default function Navbar() {
                 </section>
                 <section className="flex items-center">
 
-                    <div className="flex">
-                        <span className="text-5xl relative right-2"><BiCartAdd /></span>
+                    <div className="flex" >
+                        <span className="text-5xl relative right-2" onClick={()=>document.getElementById('cart').style.left="0%"}><BiCartAdd /></span>
                     </div>
                     <span className="flex items-center cursor-pointer text-3xl " onClick={()=>setTopNav('100vh')}><BsThreeDotsVertical /></span>
                 </section>
             </nav>
-           <div className="flex lg:hidden justify-end "><span className="bg-blue-950 h-2/3 rounded-3xl text-white p-1 relative px-2 bottom-16 right-16" >0</span></div> 
+           <div className="flex lg:hidden justify-end  "><span className="bg-blue-950 h-2/3 rounded-3xl text-white p-1 relative px-2 bottom-16 right-16" >0</span></div> 
            
 
         </div>

@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Productlist from "../../component/BookStore/Productlist";
 import FilterCard from "../../component/BookStore/FilterCard";
+import { useDispatch } from "react-redux";
+import { changeProducts } from "../../State/Slice/ProductSlice";
+import axios from "axios";
 
 export default function BookStore() {
+      const dispatch = useDispatch();
+      useEffect(()=>{
+        getProducts();
+      },[])
 
+    async function getProducts(){
+        const response = await axios.get(`http://localhost:4000/book_publisher/product`,{
+            params:{
+                priceFilter:{
+                    min:0,
+                    max:100
+                }
+            }
+        });
+        console.log(response.data)
+        dispatch(changeProducts(response.data))
+    }
 
     return (
 

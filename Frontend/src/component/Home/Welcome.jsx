@@ -16,7 +16,7 @@ export default function Welcome() {
            Books to Helps You Travel <br />
             to a Different World <br />
          
-            <button className="mt-5 border border-black rounded hover:bg-black hover:text-white text-2xl px-4 cursor-pointer p-2">Shop Now</button>
+            <button className="mt-5 border border-black rounded hover:bg-black hover:text-white text-2xl px-4 cursor-pointer p-2 transition-all duration-1000 ease-linear">Shop Now</button>
          
       </div>
        

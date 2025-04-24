@@ -8,11 +8,15 @@ import Contact from "./Contact";
 import SelectedProduct from "./SelectedProduct";
 import Signup from "./SignUp";
 import Login from "./Login";
+import OrderStatus from "./OrderStatus";
+import Cart from "../../component/Cart/Cart";
 
 export default function CustomerSection(){
 
     return (
           <>
+          <Cart/>
+          
           <Navbar/>
 
          <Routes>
@@ -21,6 +25,7 @@ export default function CustomerSection(){
             <Route path = "/signup" Component={Signup}/>
             <Route path="/bookstore" Component={BookStore}/>
             <Route path="/selected" Component={SelectedProduct}/>
+            <Route path="/orderstatus" Component={OrderStatus}/>
             <Route path="/contact" Component={Contact}/>
          </Routes>
 
