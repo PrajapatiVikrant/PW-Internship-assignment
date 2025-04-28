@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
 import { Route, Routes } from "react-router";
@@ -12,6 +12,7 @@ import OrderStatus from "./OrderStatus";
 import Cart from "../../component/Cart/Cart";
 
 export default function CustomerSection(){
+   
 
     return (
           <>

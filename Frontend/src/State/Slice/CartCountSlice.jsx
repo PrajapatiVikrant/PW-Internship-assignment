@@ -6,6 +6,7 @@ const CartCountSlice = createSlice({
     initialState:0,
     reducers:{
        increment:(state,action)=>{
+        console.log('hello i have run')
         state = state+1;
         return state;
        },
@@ -16,5 +17,5 @@ const CartCountSlice = createSlice({
     }
 })
 
-const {increment,decrement} = CartCountSlice.actions;
+export const {increment,decrement} = CartCountSlice.actions;
 export default CartCountSlice.reducer;

@@ -1,13 +1,14 @@
 import express from "express"
-import cart from "../controller/cart.controller";
+import cart from "../controller/cart.controller.js";
+import verifyToken from "../middleware/JWTverify.middleware.js";
 
 
 const router = express.Router();
 
-router.get('/',cart.read);
-router.post('/',cart.create)
-router.put('/',cart.update)
-router.delete('/',cart.remove);
+router.get('/',verifyToken,cart.read);
+router.post('/',verifyToken,cart.create)
+router.put('/:id',verifyToken,cart.update)
+router.delete('/:id',cart.remove);
 
 
 export default router;

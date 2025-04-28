@@ -26,7 +26,7 @@ export default function Login() {
        
         if(password){
             if(password.length<6){
-                setValidPassword("password's lenght must be 8 or more")
+              setValidPassword("password's lenght must be 8 or more")
             }
         }else{
             return setValidPassword("password is required")
@@ -36,7 +36,10 @@ export default function Login() {
            });
            console.log(response.data);
            alert(response.data.message);
-           navigate('/');
+           response.data.status==200 && localStorage.setItem("token",response.data.token)
+           response.data.status == 200 && navigate('/');
+           location.reload()
+         
     }
 
     return (
